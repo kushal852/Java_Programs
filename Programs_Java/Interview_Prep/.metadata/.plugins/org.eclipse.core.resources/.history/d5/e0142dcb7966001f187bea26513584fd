@@ -1,0 +1,22 @@
+package javaprograms;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SortWordsInAnArray {
+
+	public static void main(String[] args) {
+
+		String words = "This is Kushal Gupta";
+		String[] words_Arr = words.split(" ");
+		String sorted_string = "";
+		//List<String> word_arr = new ArrayList<String>();
+		
+		for (String word : words_Arr) {
+			System.out.println(word);
+		}
+			
+		
+	}
+
+}

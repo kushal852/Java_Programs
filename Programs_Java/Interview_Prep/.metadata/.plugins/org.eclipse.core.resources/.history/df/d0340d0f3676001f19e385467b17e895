@@ -1,0 +1,71 @@
+package javaprograms;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Substrings {
+
+	public static void main(String[] args) {
+		
+		String original = "Kushal is preparing a Test for automation testing";
+		String sub = "Test";
+		Set<String> singleSubStrings = new HashSet<String>();
+		Set<String> multiSubStrings = new HashSet<String>();
+		HashMap<String, ArrayList<Integer>> occurence = new HashMap<String, ArrayList<Integer>>();
+		HashMap<String, Integer> counter = new HashMap<String, Integer>();
+		int count = 0;
+		//original = original.toLowerCase();
+		//sub = sub.toLowerCase();
+		
+		
+		for(int i=0 ; i<sub.length(); i++) {
+			for(int j=i+1 ; j<sub.length()+1; j++) {
+				if(sub.substring(i,j).length() == 1) {
+					singleSubStrings.add(sub.substring(i,j));
+				}else {
+					multiSubStrings.add(sub.substring(i,j));
+				}
+				
+			}
+		}
+		
+		//{T:[3,[occurences]]}
+		
+		System.out.println(singleSubStrings);
+		System.out.println(multiSubStrings);
+		
+		for(String subString : singleSubStrings) {
+			for(int i =0; i<original.length();i++) {
+				
+				if(Character.toString(original.charAt(i)) == subString) {
+					if(occurence.containsKey(subString) && counter.containsKey(subString)) {
+						ArrayList<Integer> existingOccurences = new ArrayList<Integer>();
+						existingOccurences = occurence.get(subString);
+						existingOccurences.add(i);	
+						occurence.put(subString,existingOccurences);
+						counter.put(subString, counter.get(subString)+1);
+					}else {
+						counter.put(subString, 1);
+						ArrayList<Integer> newOccurence = new ArrayList<Integer>();
+						newOccurence.add(i);
+						occurence.put(subString,newOccurence);		
+					}
+				}
+				
+				
+				System.out.println(occurence);
+				System.out.println(counter);	
+					
+					
+			}
+		}
+		
+		
+				
+
+	}
+
+}

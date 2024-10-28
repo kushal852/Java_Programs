@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+F:\Interview_Prep\.metadata\.plugins\org.eclipse.jdt.core
-506863510.index
-3803894794.index
-1865797976.index

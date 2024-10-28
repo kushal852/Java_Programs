@@ -8,9 +8,10 @@ public class CoForge {
 
 		int[] a1 = { 111, 0, 1, 88 };
 		int[] a2 = { 11, 1, 1, 0, 12 };
-
+		
+		// Merge 2 arrays and sort the merged array in descending order
 		int[] output = new int[a1.length + a2.length];
-
+		
 		for (int i = 0; i < a1.length; i++) {
 			output[i] = a1[i];
 		}
@@ -32,7 +33,8 @@ public class CoForge {
 		}
 
 		System.out.println(Arrays.toString(descendingOrderOutput));
-
+		
+		// find the occurrence of each element in merged array and remove duplicates
 		HashMap<Integer, Integer> duplicates = new HashMap<Integer, Integer>();
 		for (int i = 0; i < descendingOrderOutput.length; i++) {
 			if (duplicates.containsKey(descendingOrderOutput[i])) {

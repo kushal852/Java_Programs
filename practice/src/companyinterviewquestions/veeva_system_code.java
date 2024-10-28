@@ -39,7 +39,7 @@ public class veeva_system_code {
 		}	
 		
 		
-		int[] arr = {-3,-1,0,1,3,4,6,7};
+		int[] arr = {-3,-2,-1,0,1,3,4,6,7};
 		//List<Integer> arr1 = new ArrayList<Integer>();
 		//int max_value = arr[arr.length-1];
 		int min_value = arr[0]+1;

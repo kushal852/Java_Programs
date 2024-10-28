@@ -1,0 +1,10 @@
+package servicenowprep;
+
+public class Reverse_a_string_by_maintaining_the_spaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

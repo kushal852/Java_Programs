@@ -31,8 +31,8 @@ public class SortingOccurencesBasedOnValuesIfValuesAreSameSortOccurencesBasedOnK
 		HashMap<Integer, ArrayList<Character>> sortedMap = new HashMap<Integer, ArrayList<Character>>();
 
 		for (int i = frequency.size() - 1; i >= 0; i--) {
+			ArrayList<Character> current = new ArrayList<Character>();
 			for (Character c : a.keySet()) {
-				ArrayList<Character> current = new ArrayList<Character>();
 				if (a.get(c) == frequency.get(i)) {
 					if (sortedMap.containsKey(frequency.get(i))) {
 						current = sortedMap.get(frequency.get(i));

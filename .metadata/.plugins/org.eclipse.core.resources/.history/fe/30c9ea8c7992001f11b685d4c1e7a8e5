@@ -1,0 +1,23 @@
+package servicenowprep;
+
+import java.util.ArrayList;
+
+public class Reverse_a_string_by_maintaining_the_spaces {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "I am a Tester";
+		ArrayList<Integer> spaceIndexes = new ArrayList<Integer>();
+		String output = "";
+		
+		for(int i=0; i<s.length();i++) {
+			if(s.charAt(i) == ' ') {
+				spaceIndexes.add(i);
+			}
+		}
+		
+		System.out.println(spaceIndexes);
+		
+	}
+
+}

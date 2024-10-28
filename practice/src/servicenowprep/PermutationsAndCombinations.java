@@ -6,38 +6,42 @@ import java.util.Set;
 public class PermutationsAndCombinations {
 
 		
-		public static Set<String> permutationFinder(String str) {
-	        Set<String> perm = new HashSet<String>();
-	        //Handling error scenarios
-	        if (str == null) {
-	            return null;
-	        } else if (str.length() == 0) {
-	            perm.add("");
-	            return perm;
+	 public static void findPermutations(String str, String result) {
+	        // If the string is empty, print the result
+	        if (str.length() == 0) {
+	            System.out.println(result);
+	            return;
 	        }
-	        char initial = str.charAt(0); // first character
-	        String rem = str.substring(1); // Full string without first character
-	        System.out.println(initial);
-	        System.out.println(rem);
-	        Set<String> words = permutationFinder(rem);
-	        for (String strNew : words) {
-	            for (int i = 0;i<=strNew.length();i++){
-	                perm.add(charInsert(strNew, initial, i));
-	            }
+
+	        // Loop through each character and generate permutations
+	        for (int i = 0; i < str.length(); i++) {
+	            // Remove the i-th character and find permutations of the remaining string
+	            char ch = str.charAt(i);
+	            String remaining = str.substring(0, i) + str.substring(i + 1);
+	            findPermutations(remaining, result + ch);
 	        }
-	        System.out.println(perm);
-	        return perm;
 	    }
 
-	    public static String charInsert(String str, char c, int j) {
-	        String begin = str.substring(0, j);
-	        String end = str.substring(j);
-	        return begin + c + end;
+	    // Method to print all combinations of the string
+	    public static void findCombinations(String str, String result, int index) {
+	        // Print the result if it's not empty (to exclude the empty combination)
+	        if (!result.isEmpty()) {
+	            System.out.println(result);
+	        }
+
+	        // Loop through the rest of the characters to find combinations
+	        for (int i = index; i < str.length(); i++) {
+	            findCombinations(str, result + str.charAt(i), i + 1);
+	        }
 	    }
 
 	    public static void main(String[] args) {
-	        String s1 = "ABC";
-	        System.out.println("\nPermutations for " + s1 + " are: \n" + permutationFinder(s1));
+	        String str = "abc";
+	        System.out.println("Permutations of the string:");
+	        findPermutations(str, "");
+
+	        System.out.println("\nCombinations of the string:");
+	        findCombinations(str, "", 0);
 	    }
 
 

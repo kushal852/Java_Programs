@@ -1,0 +1,38 @@
+package servicenowprep;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class RotateAnArray {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Integer> nums = new ArrayList<Integer>(Arrays.asList(8,6,3,5,2,4,1));
+		
+		int rotation = 100;
+		int r = rotation%(nums.size());
+		int q = rotation/(nums.size());
+		System.out.println(r);
+		System.out.println(q);
+		int temp = 0;
+		
+		
+		for(int i=0; i<rotation ; i++) {
+			temp = nums.get(i);
+			nums.remove(i);
+			nums.add(temp);
+		}
+			System.out.println(nums);
+		
+//			 arr.removeAll(temp);
+//		        System.out.println(arr);
+//		        arr.addAll(temp);
+//		        System.out.println(arr);
+		
+		
+		
+
+	}
+
+}

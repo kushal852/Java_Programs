@@ -13,6 +13,7 @@ public class Dhurva_Systems_Code {
 		int[] arr1 = {2, 3, 6, 7, 9};
 		int[] arr2 = {1, 4, 8, 10};
 		
+		//Merge 2 arrays without sorting and find the kth element
 		int[] output = new int[arr1.length + arr2.length];
 		//List<Integer> o1 = new ArrayList<Integer>();
 		
@@ -28,7 +29,7 @@ public class Dhurva_Systems_Code {
 		
 		int temp;
 		int len = output.length;
-		
+		// sort the merged array and find the kth element
 		// bubble sort
 		for(int i=0; i<output.length;i++) {
 			for(int j=i+1; j<output.length; j++) {
@@ -43,6 +44,7 @@ public class Dhurva_Systems_Code {
 		System.out.println(output[k]);
 		
 		
+		// Add zeros and one in order
 		int arr[] = {0,1,0,1,1,1,0};
 		
 		List<Integer> zero_arr = new ArrayList<Integer>();

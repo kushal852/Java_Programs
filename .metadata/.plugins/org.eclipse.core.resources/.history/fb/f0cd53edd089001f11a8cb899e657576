@@ -1,0 +1,10 @@
+package servicenowprep;
+
+public class X_digit_numbers_whose_sum_of_the_digits_is_Y {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

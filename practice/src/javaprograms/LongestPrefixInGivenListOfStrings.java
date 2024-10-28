@@ -5,7 +5,7 @@ public class LongestPrefixInGivenListOfStrings {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String[] strs = {"flower", "flow", "flight"};
+		String[] strs = {"flower", "flow", "floght"};
 		String prefix = "";
 		String shortest = "";
 		boolean isCommon = true;
